@@ -75,3 +75,16 @@ func (api *API) initMux() {
 	api.mux.Use(RequestIDLoggerMiddleware(api.mux))
 	api.mux.Use(LoggerMiddleware(api.mux))
 }
+
+// return firstNSymbols symbols from string
+func shortify(fullContent string, firstNSymbols int) string {
+	idx := 0
+	for upTo := range fullContent {
+		if idx == firstNSymbols {
+			return fullContent[:upTo] + "..."
+		}
+		idx++
+	}
+
+	return fullContent
+}
