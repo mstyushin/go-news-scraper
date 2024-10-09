@@ -16,7 +16,8 @@ else
 endif
 $(eval VERSIONDATE := $(shell git show -s --format=%cI $($VERSION)))
 
-PG_STARTED=$(shell echo $$((`docker ps --filter "name=db-scraper" --quiet 2> /dev/null | wc -l` + `ps aux|grep -m 1 [p]ostgres:| wc -l`+0)))
+#PG_STARTED=$(shell echo $$((`docker ps --filter "name=db-scraper" --quiet 2> /dev/null | wc -l` + `ps aux|grep -m 1 [p]ostgres:| wc -l`+0)))
+PG_STARTED=$(shell echo $$((`docker ps --filter "name=db-scraper" --quiet 2> /dev/null | wc -l` +0)))
 pg-run:
 ifeq ($(PG_STARTED),0)
 	docker run --name db-scraper -d -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 postgres:15.4
