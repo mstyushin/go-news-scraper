@@ -9,6 +9,6 @@ type Paginator struct {
 }
 
 type PaginatedResponse struct {
-	Articles  []storage.Article `json:"articles"`
-	Paginator Paginator         `json:"paginator"`
+	Articles  []storage.ArticleShort `json:"articles"`
+	Paginator Paginator              `json:"paginator"`
 }

@@ -138,6 +138,36 @@ OFFSET $3;
 	return articles, nil
 }
 
+func (db *DB) CountArticles(ctx context.Context, search string) (int, error) {
+	sql := "SELECT count(*) FROM articles;"
+	sqlFiltered := "SELECT count(*) FROM articles WHERE title ILIKE $1;"
+	var count int
+
+	if search != "" {
+		rows, err := db.pool.Query(ctx, sqlFiltered, "%"+search+"%")
+		if err != nil {
+			return 0, err
+		}
+		for rows.Next() {
+			if err := rows.Scan(&count); err != nil {
+				return 0, err
+			}
+		}
+	} else {
+		rows, err := db.pool.Query(ctx, sql)
+		if err != nil {
+			return 0, err
+		}
+		for rows.Next() {
+			if err := rows.Scan(&count); err != nil {
+				return 0, err
+			}
+		}
+	}
+
+	return count, nil
+}
+
 func (db *DB) AddArticle(ctx context.Context, a storage.Article) (int, error) {
 	sql := `
 INSERT INTO
