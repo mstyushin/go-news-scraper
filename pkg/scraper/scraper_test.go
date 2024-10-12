@@ -4,13 +4,14 @@ import (
 	"context"
 	"encoding/xml"
 	"fmt"
-	"go-news-scraper/pkg/storage/pg"
 	"log"
 	"net"
 	"net/http"
 	"os"
 	"testing"
 	"time"
+
+	"github.com/mstyushin/go-news-scraper/pkg/storage/pg"
 
 	"github.com/gorilla/mux"
 	"github.com/jackc/pgx/v4/pgxpool"

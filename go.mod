@@ -1,4 +1,4 @@
-module go-news-scraper
+module github.com/mstyushin/go-news-scraper
 
 go 1.22
 

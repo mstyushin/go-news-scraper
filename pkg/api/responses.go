@@ -1,6 +1,6 @@
 package api
 
-import "go-news-scraper/pkg/storage"
+import "github.com/mstyushin/go-news-scraper/pkg/storage"
 
 type Paginator struct {
 	NumPages int `json:"num_pages"`

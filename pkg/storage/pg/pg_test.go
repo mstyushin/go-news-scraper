@@ -3,12 +3,13 @@ package pg
 import (
 	"context"
 	"errors"
-	"go-news-scraper/pkg/config"
-	"go-news-scraper/pkg/storage"
 	"log"
 	"os"
 	"testing"
 	"time"
+
+	"github.com/mstyushin/go-news-scraper/pkg/config"
+	"github.com/mstyushin/go-news-scraper/pkg/storage"
 
 	"github.com/georgysavva/scany/pgxscan"
 	"github.com/jackc/pgx/v4/pgxpool"

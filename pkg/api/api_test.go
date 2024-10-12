@@ -4,8 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"go-news-scraper/pkg/storage"
-	"go-news-scraper/pkg/storage/pg"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -13,6 +11,9 @@ import (
 	"os"
 	"testing"
 	"time"
+
+	"github.com/mstyushin/go-news-scraper/pkg/storage"
+	"github.com/mstyushin/go-news-scraper/pkg/storage/pg"
 
 	"github.com/jackc/pgx/v4/pgxpool"
 	"github.com/stretchr/testify/assert"

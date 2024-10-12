@@ -2,9 +2,10 @@ package api
 
 import (
 	"encoding/json"
-	"go-news-scraper/pkg/storage"
 	"net/http"
 	"strconv"
+
+	"github.com/mstyushin/go-news-scraper/pkg/storage"
 
 	"github.com/gorilla/mux"
 )
