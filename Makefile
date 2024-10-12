@@ -37,7 +37,7 @@ ifeq ($(PG_TEST_STARTED),0)
 endif
 
 build:
-	@go mod tidy && go build -ldflags="-X 'go-news-scraper/pkg/config.Version=$(VERSION)' -X 'go-news-scraper/pkg/config.Hash=$(HASHCOMMIT)' -X 'go-news-scraper/pkg/config.VersionDate=$(VERSIONDATE)'" -o bin/$(APP_NAME) go-news-scraper/cmd/server
+	@go mod tidy && go build -ldflags="-X 'go-news-scraper/pkg/config.Version=$(VERSION)' -X 'go-news-scraper/pkg/config.Hash=$(HASHCOMMIT)' -X 'go-news-scraper/pkg/config.VersionDate=$(VERSIONDATE)'" -o bin/$(APP_NAME) github.com/mstyushin/go-news-scraper/cmd/server
 	@chmod +x bin/$(APP_NAME)
 
 run: build pg-run
