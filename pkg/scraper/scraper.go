@@ -5,12 +5,13 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
-	"go-news-scraper/pkg/rss"
-	"go-news-scraper/pkg/storage"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/mstyushin/go-news-scraper/pkg/rss"
+	"github.com/mstyushin/go-news-scraper/pkg/storage"
 )
 
 // Scraper отвечает за выборку статей из новостных лент и запись

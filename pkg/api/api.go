@@ -3,10 +3,11 @@ package api
 import (
 	"context"
 	"fmt"
-	"go-news-scraper/pkg/storage"
 	"log"
 	"net"
 	"net/http"
+
+	"github.com/mstyushin/go-news-scraper/pkg/storage"
 
 	"github.com/gorilla/mux"
 )

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"go-news-scraper/pkg/storage"
+	"github.com/mstyushin/go-news-scraper/pkg/storage"
 
 	strip "github.com/grokify/html-strip-tags-go"
 )

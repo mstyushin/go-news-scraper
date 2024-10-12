@@ -2,15 +2,16 @@ package main
 
 import (
 	"context"
-	"go-news-scraper/pkg/api"
-	"go-news-scraper/pkg/config"
-	"go-news-scraper/pkg/scraper"
-	"go-news-scraper/pkg/storage"
-	"go-news-scraper/pkg/storage/pg"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/mstyushin/go-news-scraper/pkg/api"
+	"github.com/mstyushin/go-news-scraper/pkg/config"
+	"github.com/mstyushin/go-news-scraper/pkg/scraper"
+	"github.com/mstyushin/go-news-scraper/pkg/storage"
+	"github.com/mstyushin/go-news-scraper/pkg/storage/pg"
 )
 
 const (
